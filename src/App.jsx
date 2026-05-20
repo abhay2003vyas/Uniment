@@ -1,15 +1,16 @@
-import Navbar from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import "./App.css";
-
+import "./index.css";
 function App() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Home />
-      </main>
-    </>
+    <div className="flex flex-col min-h-screen">
+      <div className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+
+    </div>
   );
 }
 
