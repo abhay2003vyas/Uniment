@@ -35,7 +35,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import UniversitySlider from "../components/UniversitySlider";
 import Faqsection from "../components/FaqSection";
-import WhatsAppButton from "../components/WhatsAppButton";
+import WhatsAppButton from "../components/Whatsappbutton";
 
 export default function Home() {
   return (
