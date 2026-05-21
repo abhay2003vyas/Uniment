@@ -33,7 +33,7 @@ import CtaBanner from "../components/CtaBanner";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import LogoSlider from "../components/LogoSlider";
+import UniversitySlider from "../components/UniversitySlider";
 import Faqsection from "../components/FaqSection";
 import WhatsAppButton from "../components/WhatsAppButton";
 
@@ -42,7 +42,7 @@ export default function Home() {
     <>
       <Navbar />
       <HeroSection />
-      <LogoSlider />
+      <UniversitySlider />
       {/* <SubjectTicker /> */}
       <AboutSection />
       <SpecialisationSection />
