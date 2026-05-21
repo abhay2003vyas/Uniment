@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { useScrollReveal } from "./useScrollReveal";
 
-// ── Palette unified with Navbar + AboutSection + SpecialisationSection ──────
-const BLUE      = "#0054A6";
-const BLUE_DARK = "#003C7A";
-const BLUE_TINT = "#EBF2FF";
-const BORDER    = "#DDE1EC";
+// ── Palette unified with Navbar + HeroSection + AboutSection ─────────────────
+const RED       = "#C0392B";
+const RED_DARK  = "#A93226";
+const RED_TINT  = "#fff5f5";
+const BORDER    = "#e5e7eb";
 const GOLD      = "#F59E0B";
-const TEXT_PRI  = "#1A1A2E";
-const TEXT_SEC  = "#6B6882";
-const BG_INPUT  = "#F7F8FC";
+const TEXT_PRI  = "#111827";
+const TEXT_SEC  = "#6b7280";
+const BG_INPUT  = "#F5F5F7";
 
 const STAR_LABELS = ["", "Poor", "Fair", "Good", "Very Good", "Excellent"];
 
-// ── Star rating component ────────────────────────────────────────────────────
+// ── Star rating component ─────────────────────────────────────────────────────
 function StarRating({ value, onChange }) {
   const [hovered, setHovered] = useState(0);
 
@@ -39,7 +39,7 @@ function StarRating({ value, onChange }) {
       </div>
       <span style={{
         fontSize:11, fontWeight:600, letterSpacing:".08em",
-        color: BLUE, minHeight:16, display:"block",
+        color: RED, minHeight:16, display:"block",
       }}>
         {(hovered || value) > 0 ? STAR_LABELS[hovered || value] : ""}
       </span>
@@ -47,7 +47,7 @@ function StarRating({ value, onChange }) {
   );
 }
 
-// ── Main component ───────────────────────────────────────────────────────────
+// ── Main component ────────────────────────────────────────────────────────────
 export default function FeedbackForm() {
   const ref = useScrollReveal();
   const [form, setForm] = useState({ name:"", email:"", rating:0, review:"" });
@@ -84,7 +84,7 @@ export default function FeedbackForm() {
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
 
         .fbform-root {
-          background: #F7F8FC;
+          background: #F5F5F7;
           border-top: 1px solid ${BORDER};
           border-bottom: 1px solid ${BORDER};
           font-family: 'Inter', -apple-system, sans-serif;
@@ -94,12 +94,14 @@ export default function FeedbackForm() {
 
         /* ── Header ── */
         .fbform-header { text-align: center; margin-bottom: 48px; }
+
+        /* Section tag: red left border */
         .fbform-tag {
           display: inline-block;
           font-size: 10px; font-weight: 700;
           letter-spacing: .18em; text-transform: uppercase;
-          color: ${BLUE};
-          border-left: 3px solid ${BLUE};
+          color: ${RED};
+          border-left: 3px solid ${RED};
           padding-left: 10px; margin-bottom: 12px;
         }
         .fbform-h2 {
@@ -107,7 +109,8 @@ export default function FeedbackForm() {
           font-weight: 900; line-height: 1.12;
           letter-spacing: -.03em; color: ${TEXT_PRI}; margin: 0 0 10px;
         }
-        .fbform-h2 em { color: ${BLUE}; font-style: normal; }
+        /* Heading accent: red */
+        .fbform-h2 em { color: ${RED}; font-style: normal; }
         .fbform-sub { font-size: 13.5px; color: ${TEXT_SEC}; margin: 0; }
 
         /* ── Card ── */
@@ -115,7 +118,7 @@ export default function FeedbackForm() {
           background: #FFFFFF;
           border: 1px solid ${BORDER};
           border-radius: 12px; overflow: hidden;
-          box-shadow: 0 4px 24px rgba(0,84,166,.06);
+          box-shadow: 0 4px 24px rgba(17,24,39,.06);
         }
         .fbform-body { padding: 48px; }
         .fbform-grid {
@@ -133,9 +136,10 @@ export default function FeedbackForm() {
           outline: none; box-sizing: border-box;
           transition: border-color .18s, box-shadow .18s;
         }
+        /* Focus ring: red */
         .fb-input:focus {
-          border-color: ${BLUE};
-          box-shadow: 0 0 0 3px ${BLUE_TINT};
+          border-color: ${RED};
+          box-shadow: 0 0 0 3px ${RED_TINT};
         }
         .fb-input::placeholder { color: #A8B0C0; }
 
@@ -146,7 +150,8 @@ export default function FeedbackForm() {
           background: ${BG_INPUT};
           transition: border-color .18s;
         }
-        .fbform-rating-box:focus-within { border-color: ${BLUE}; }
+        /* Focus within: red border */
+        .fbform-rating-box:focus-within { border-color: ${RED}; }
 
         /* ── Textarea ── */
         .fb-textarea {
@@ -159,8 +164,8 @@ export default function FeedbackForm() {
           transition: border-color .18s, box-shadow .18s;
         }
         .fb-textarea:focus {
-          border-color: ${BLUE};
-          box-shadow: 0 0 0 3px ${BLUE_TINT};
+          border-color: ${RED};
+          box-shadow: 0 0 0 3px ${RED_TINT};
         }
         .fb-textarea::placeholder { color: #A8B0C0; }
 
@@ -170,20 +175,20 @@ export default function FeedbackForm() {
           font-weight: 500; margin: 8px 0; min-height: 18px;
         }
 
-        /* ── Submit — matches .ua-btn-primary in Navbar ── */
+        /* ── Submit button: red pill, matches site CTA style ── */
         .fb-submit-btn {
           width: 100%; margin-top: 16px; padding: 13px 28px;
-          background: ${BLUE}; color: #FFFFFF;
-          border: none; border-radius: 6px; cursor: pointer;
+          background: ${RED}; color: #FFFFFF;
+          border: none; border-radius: 9999px; cursor: pointer;
           font-family: 'Inter', sans-serif;
           font-size: 13px; font-weight: 600; letter-spacing: .02em;
-          box-shadow: 0 2px 8px rgba(0,84,166,.22);
+          box-shadow: 0 2px 8px rgba(192,57,43,.22);
           transition: background .18s, transform .12s, box-shadow .18s;
         }
         .fb-submit-btn:hover {
-          background: ${BLUE_DARK};
+          background: ${RED_DARK};
           transform: translateY(-1px);
-          box-shadow: 0 5px 18px rgba(0,84,166,.28);
+          box-shadow: 0 5px 18px rgba(192,57,43,.32);
         }
 
         /* ── Success state ── */
@@ -191,11 +196,12 @@ export default function FeedbackForm() {
           text-align: center; padding: 80px 32px;
           display: flex; flex-direction: column; align-items: center; gap: 14px;
         }
+        /* Success icon: red tint */
         .fbform-success-icon {
           width: 62px; height: 62px; border-radius: 50%;
-          background: ${BLUE_TINT}; border: 1.5px solid #A8C4E0;
+          background: ${RED_TINT}; border: 1.5px solid #f5c6c6;
           display: flex; align-items: center; justify-content: center;
-          color: ${BLUE};
+          color: ${RED};
         }
         .fbform-success-title {
           font-size: clamp(1.4rem, 2.5vw, 1.8rem);
@@ -234,7 +240,7 @@ export default function FeedbackForm() {
           {/* Card */}
           <div className="fbform-card ua-reveal ua-d2">
             {submitted ? (
-              /* Success */
+              /* Success state */
               <div className="fbform-success">
                 <div className="fbform-success-icon">
                   <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2">
