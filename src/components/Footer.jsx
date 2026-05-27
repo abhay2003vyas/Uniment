@@ -45,9 +45,9 @@ const NAV_COLS = [
     heading: "Support",
     links: [
       { label: "Contact Us",     href: "#contact"                              },
-      { label: "WhatsApp Us",    href: "https://wa.me/919876543210"            },
-      { label: "Call Us",        href: "tel:+919876543210"                     },
-      { label: "Email Support",  href: "mailto:support@unimentassignment.com"  },
+      { label: "WhatsApp Us",    href: "https://wa.me/918764412948"            },
+      { label: "Call Us",        href: "tel:+918764412948"                     },
+      { label: "Email Support",  href: "mailto:unimentsolutionsllp@gmail.com"  },
       { label: "Leave a Review", href: "#feedback-form"                        },
     ],
   },
@@ -55,9 +55,9 @@ const NAV_COLS = [
 
 const SOCIAL = [
   { icon: <InstagramIcon fontSize="small" />, label: "Instagram", href: "#"                                           },
-  { icon: <WhatsAppIcon  fontSize="small" />, label: "WhatsApp",  href: "https://wa.me/919876543210"                  },
-  { icon: <PhoneIcon     fontSize="small" />, label: "Phone",     href: "tel:+919876543210"                           },
-  { icon: <EmailIcon     fontSize="small" />, label: "Email",     href: "mailto:support@unimentassignment.com"        },
+  { icon: <WhatsAppIcon  fontSize="small" />, label: "WhatsApp",  href: "https://wa.me/918764412948"                  },
+  { icon: <PhoneIcon     fontSize="small" />, label: "Phone",     href: "tel:+918764412948"                           },
+  { icon: <EmailIcon     fontSize="small" />, label: "Email",     href: "mailto:unimentsolutionsllp@gmail.com"        },
 ];
 
 // ─── Tokens ───────────────────────────────────────────────────────────────────
@@ -217,9 +217,9 @@ export default function Footer() {
             </Typography>
             <Stack direction="row" spacing={2} flexWrap="wrap" useFlexGap>
               {[
-                { icon: <PhoneIcon sx={{ fontSize:14 }} />, text: "+91 98765 43210", href: "tel:+919876543210" },
-                { icon: <WhatsAppIcon sx={{ fontSize:14 }} />, text: "WhatsApp Us", href: "https://wa.me/919876543210" },
-                { icon: <EmailIcon sx={{ fontSize:14 }} />, text: "support@unimentassignment.com", href: "mailto:support@unimentassignment.com" },
+                { icon: <PhoneIcon sx={{ fontSize:14 }} />, text: "+91 98765 43210", href: "tel:+918764412948" },
+                { icon: <WhatsAppIcon sx={{ fontSize:14 }} />, text: "WhatsApp Us", href: "https://wa.me/918764412948" },
+                { icon: <EmailIcon sx={{ fontSize:14 }} />, text: "unimentsolutionsllp@gmail.com", href: "mailto:unimentsolutionsllp@gmail.com" },
               ].map((item) => (
                 <Link
                   key={item.text}
