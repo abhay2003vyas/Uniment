@@ -16,8 +16,8 @@ const CONTACT_INFO = [
       </svg>
     ),
     label: "Email",
-    value: "support@unimentassignment.com",
-    href:  "mailto:support@unimentassignment.com",
+    value: "unimentsolutionsllp@gmail.com",
+    href:  "mailto:unimentsolutionsllp@gmail.com",
   },
   {
     icon: (
@@ -26,8 +26,8 @@ const CONTACT_INFO = [
       </svg>
     ),
     label: "Mobile",
-    value: "+91 98765 43210",
-    href:  "tel:+919876543210",
+    value: "+91 8764412948",
+    href:  "tel:+918764412948",
   },
   {
     icon: (
@@ -36,8 +36,8 @@ const CONTACT_INFO = [
       </svg>
     ),
     label: "WhatsApp",
-    value: "+91 98765 43210",
-    href:  "https://wa.me/919876543210",
+    value: "+91 8764412948",
+    href:  "https://wa.me/918764412948",
   },
   {
     icon: (
